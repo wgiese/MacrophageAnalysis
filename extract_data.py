@@ -77,13 +77,16 @@ class ExtractData:
                 if (dist2 < occupancy_radius_pixel*occupancy_radius_pixel):
                     list_occupancy_with_vessels.append(k)
                     
-                if vessel_im_dist_transform[ p_x, p_y] == 0:
+                if vessel_im_dist_transform[ p_x, p_y] < occupancy_radius_pixel:
                     list_occupancy_with_vessels.append(k)
                 
                 
         area1 = float(x_ext*y_ext*len(set(list_occupancy_with_vessels)))/float(sample_points)
-        area2 = float(np.pi*occupancy_radius_pixel*occupancy_radius_pixel*len(MP_pos['X']) + np.count_nonzero(vessel_im_dist_transform))
-                
+        #area2 = float(np.pi*occupancy_radius_pixel*occupancy_radius_pixel*len(MP_pos['X']) + np.count_nonzero(vessel_im_dist_transform))
+         
+        area2 = float(np.pi*occupancy_radius_pixel*occupancy_radius_pixel*len(MP_pos['X']) + (vessel_im_dist_transform < occupancy_radius_pixel).sum())
+         
+         
         occupancy_with_vessels = area1/area2
         
         return occupancy, occupancy_with_vessels
@@ -192,7 +195,9 @@ class ExtractData:
             distances_thin_norm_excl_vsl = distances_thin/norm_thin_value
             distances_thick_norm_excl_vsl = distances_thick/norm_thick_value 
             
-            occupancy, occupancy_with_vessels = self.calculate_occupancy(MP_pos,vessel_im_dist_transform)
+            occupancy_r10, occupancy_with_vessels_r10 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 10.0)
+            occupancy_r20, occupancy_with_vessels_r20 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 20.0)
+            occupancy_r30, occupancy_with_vessels_r30 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 30.0)
             
 
             df_cells = df_cells.append(pd.DataFrame({'distance_vessels': distances,
@@ -204,8 +209,12 @@ class ExtractData:
                                             'distance_vessels_norm(excl.vsl.)': distances_norm_excl_vsl,
                                             'distance_thin_vessel_norm(excl.vsl.)': distances_thin_norm_excl_vsl,
                                             'distance_thick_vessel_norm(excl.vsl.)': distances_thick_norm_excl_vsl,
-                                            'occupancy' : occupancy,
-                                            'occupancy_with_vessels' : occupancy_with_vessels,
+                                            'occupancy_r10' : occupancy_r10,
+                                            'occupancy_with_vessels_r10' : occupancy_with_vessels_r10,
+                                            'occupancy_r20' : occupancy_r20,
+                                            'occupancy_with_vessels_r20' : occupancy_with_vessels_r20,
+                                            'occupancy_r30' : occupancy_r30,
+                                            'occupancy_with_vessels_r30' : occupancy_with_vessels_r30,
                                             'vessel_file': fn_['analysis_file_vessels'],
                                             'vessel_density': 1 - np.sum(vessel_im_all) / (np.shape(vessel_im_all)[0] * np.shape(vessel_im_all)[1]),
                                             'tumor_type': fn_['tumor_type'],
@@ -257,7 +266,9 @@ class ExtractData:
                 distances_thick_GFP_norm_excl_vsl = distances_thick_GFP/norm_thick_value 
                 
                 
-                occupancy, occupancy_with_vessels = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform)
+                occupancy_r10, occupancy_with_vessels_r10 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 10.0)
+                occupancy_r20, occupancy_with_vessels_r20 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 20.0)
+                occupancy_r30, occupancy_with_vessels_r30 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 30.0)
 
                 df_cells = df_cells.append(pd.DataFrame({'distance_vessels': distances_GFP,
                                                 'distance_thin_vessel': distances_thin_GFP,
@@ -268,8 +279,12 @@ class ExtractData:
                                                 'distance_vessels_norm(excl.vsl.)': distances_GFP_norm_excl_vsl,
                                                 'distance_thin_vessel_norm(excl.vsl.)': distances_thin_GFP_norm_excl_vsl,
                                                 'distance_thick_vessel_norm(excl.vsl.)': distances_thick_GFP_norm_excl_vsl,
-                                                'occupancy' : occupancy,
-                                                'occupancy_with_vessels' : occupancy_with_vessels,
+                                                'occupancy_r10' : occupancy_r10,
+                                                'occupancy_with_vessels_r10' : occupancy_with_vessels_r10,
+                                                'occupancy_r20' : occupancy_r20,
+                                                'occupancy_with_vessels_r20' : occupancy_with_vessels_r20,
+                                                'occupancy_r30' : occupancy_r30,
+                                                'occupancy_with_vessels_r30' : occupancy_with_vessels_r30,
                                                 'vessel_file': fn_['analysis_file_vessels'],
                                                 'vessel_density': 1 - np.sum(vessel_im_all) / (np.shape(vessel_im_all)[0] * np.shape(vessel_im_all)[1]),
                                                 'tumor_type': fn_['tumor_type'],
