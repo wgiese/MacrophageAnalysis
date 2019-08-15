@@ -96,6 +96,26 @@ plt.tight_layout()
 plt.savefig(data_folder + 'normalized_distances_excl_vsl.pdf')
 
 
+'''
+plot nearest neighbour metric
+'''
+
+fig,  axarr = plt.subplots(2,1, figsize=(20,10), sharey=True)
+
+sns.barplot(data=df_merged , x='tumor_type', y='nearest_neighbour', hue = "MP_type", order=('2 weeks', '4 weeks', '2+2 weeks', '4+2 weeks', '4+4 weeks'), ax=axarr[0])
+axarr[0].set_ylabel('dist. in pixels')
+axarr[0].set_title('nearest neighbour')
+
+
+sns.barplot(data=df_merged , x='tumor_type', y='4nearest_neighbour', hue = "MP_type", order=('2 weeks', '4 weeks', '2+2 weeks', '4+2 weeks', '4+4 weeks'), ax=axarr[1])
+axarr[1].set_ylabel('dist. in pixels')
+axarr[1].set_title('4 nearest neighbours')
+
+plt.tight_layout()
+plt.savefig(data_folder + 'nearest_neighbour_bar.pdf')
+
+
+
 fig,  axarr = plt.subplots(5,2, figsize=(20,10), sharey=True)
 
 sns.barplot(data=df_merged , x='tumor_type', y='occupancy_r10', hue = "MP_type", order=('2 weeks', '4 weeks', '2+2 weeks', '4+2 weeks', '4+4 weeks'), ax=axarr[0,0], ci ='sd')
@@ -123,21 +143,21 @@ axarr[2,1].set_ylabel('occupancy')
 axarr[2,1].set_title('occupancy with vessels r = 30 $\mu m$')
 
 
-sns.barplot(data=df_merged , x='tumor_type', y='occupancy_r40', hue = "MP_type", order=('2 weeks', '4 weeks', '2+2 weeks', '4+2 weeks', '4+4 weeks'), ax=axarr[2,0], ci ='sd')
-axarr[2,0].set_ylabel('occupancy')
-axarr[2,0].set_title('occupancy r = 40 $\mu m$')
+sns.barplot(data=df_merged , x='tumor_type', y='occupancy_r40', hue = "MP_type", order=('2 weeks', '4 weeks', '2+2 weeks', '4+2 weeks', '4+4 weeks'), ax=axarr[3,0], ci ='sd')
+axarr[3,0].set_ylabel('occupancy')
+axarr[3,0].set_title('occupancy r = 40 $\mu m$')
 
-sns.barplot(data=df_merged , x='tumor_type', y='occupancy_with_vessels_r40', hue = "MP_type", order=('2 weeks', '4 weeks', '2+2 weeks', '4+2 weeks', '4+4 weeks'), ax=axarr[2,1], ci ='sd')
-axarr[2,1].set_ylabel('occupancy')
-axarr[2,1].set_title('occupancy with vessels r = 40 $\mu m$')
+sns.barplot(data=df_merged , x='tumor_type', y='occupancy_with_vessels_r40', hue = "MP_type", order=('2 weeks', '4 weeks', '2+2 weeks', '4+2 weeks', '4+4 weeks'), ax=axarr[3,1], ci ='sd')
+axarr[3,1].set_ylabel('occupancy')
+axarr[3,1].set_title('occupancy with vessels r = 40 $\mu m$')
 
-sns.barplot(data=df_merged , x='tumor_type', y='occupancy_r50', hue = "MP_type", order=('2 weeks', '4 weeks', '2+2 weeks', '4+2 weeks', '4+4 weeks'), ax=axarr[2,0], ci ='sd')
-axarr[2,0].set_ylabel('occupancy')
-axarr[2,0].set_title('occupancy r = 50 $\mu m$')
+sns.barplot(data=df_merged , x='tumor_type', y='occupancy_r50', hue = "MP_type", order=('2 weeks', '4 weeks', '2+2 weeks', '4+2 weeks', '4+4 weeks'), ax=axarr[4,0], ci ='sd')
+axarr[4,0].set_ylabel('occupancy')
+axarr[4,0].set_title('occupancy r = 50 $\mu m$')
 
-sns.barplot(data=df_merged , x='tumor_type', y='occupancy_with_vessels_r50', hue = "MP_type", order=('2 weeks', '4 weeks', '2+2 weeks', '4+2 weeks', '4+4 weeks'), ax=axarr[2,1], ci ='sd')
-axarr[2,1].set_ylabel('occupancy')
-axarr[2,1].set_title('occupancy with vessels r = 50 $\mu m$')
+sns.barplot(data=df_merged , x='tumor_type', y='occupancy_with_vessels_r50', hue = "MP_type", order=('2 weeks', '4 weeks', '2+2 weeks', '4+2 weeks', '4+4 weeks'), ax=axarr[4,1], ci ='sd')
+axarr[4,1].set_ylabel('occupancy')
+axarr[4,1].set_title('occupancy with vessels r = 50 $\mu m$')
 
 
 plt.tight_layout()

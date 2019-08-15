@@ -30,47 +30,12 @@ class ExtractData:
         '''
         
         occupancy_radius_pixel = int(radius_mum*pixel_per_mum)
-        sample_points = 10000
+        sample_points = 1000
         
         x_ext = np.array(vessel_im_dist_transform).shape[0]-1
         y_ext = np.array(vessel_im_dist_transform).shape[1]-1
         
-
-        #occupied_image = np.zeros((x_ext,y_ext))
-        
-        
-        
-        #for ix,iy in np.ndindex(occupied_image.shape):
-            
-            #for index, row in MP_pos.iterrows():
-                #MP_x = int(row['X'])
-                #MP_y = int(row['Y'])
-                
-                #dist2 = (MP_x - ix)*(MP_x - ix) + (MP_y - iy)*(MP_y - iy)
-                
-                #if dist2 < occupancy_radius_pixel*occupancy_radius_pixel:
-                    #occupied_image[ix,iy] = 1
-                    
-        #area1 = np.count_nonzero(occupied_image)  
-        #area2 = np.pi*float(occupancy_radius_pixel*occupancy_radius_pixel)*float(len(MP_pos['X']))
-            
-        #occupancy =  area1/area2
-            
-        #if(occupancy > 1.0):
-            #print("================================")
-
-            #print("something is wrong with the calculation!")
-            #print("There are %s macrophages" % len(MP_pos['X']))
-            #print("shape of the image: (%s,%s)" % (x_ext,y_ext))
-            #print("area1: %s" % area1)
-            #print("area2: %s" % area2)
-            #print("occupancy radius (pixel): %s" % occupancy_radius_pixel)
-            #print("occupancy: %s" % occupancy)
-            #print("================================")
-        #else:            
-            #print("occupancy smaller 1! ")
-            
-            
+           
         points_x = np.random.randint(low=1, high=x_ext, size=sample_points)
         points_y = np.random.randint(low=1, high=y_ext, size=sample_points)
         
@@ -107,8 +72,8 @@ class ExtractData:
             #print("MP_pos")
             #print(MP_pos['X'])
             #print(list_occupancy)
+            print("occupancy greater than 1, increase sample parameter!")
             print("fractional_area: %s" % fractional_area)
-            print("something is wrong with the calculation!")
             print("%s out of %s points are occupied" % (len(set(list_occupancy)), sample_points) )
             print("There are %s macrophages" % len(MP_pos['X']))
             print("shape of the image: (%s,%s)" % (x_ext,y_ext))
@@ -117,8 +82,6 @@ class ExtractData:
             print("occupancy radius (pixel): %s" % occupancy_radius_pixel)
             print("occupancy: %s" % occupancy)
             print("================================")
-        else:            
-            print("occupancy smaller 1! ")
         
         '''
         calculate occupancy with vessels
@@ -153,6 +116,38 @@ class ExtractData:
         occupancy_with_vessels = area1/area2
         
         return occupancy, occupancy_with_vessels
+    
+    
+    def calculate_nearest_neighbours(self,MP_pos):
+        
+        dists_nn = []
+        dists_4nn = []
+        
+        for index_out, row_out in MP_pos.iterrows():
+            
+            dists = []
+            
+            for index_in, row_in in MP_pos.iterrows():
+                
+                if (index_in != index_out):
+                    dist2 = (row_out['X'] - row_in['X'])**2 + (row_out['X'] - row_in['X'])**2
+                    dists.append(np.sqrt(dist2))
+                    
+            if ( len(dists) > 0 ):
+                dists.sort()
+                dists_nn.append(dists[0])
+            else:
+                dists_nn.append(np.nan)
+                
+            if ( len(dists) > 3 ):
+                dists_4nn.append(sum(dists[0:4])/4.0)
+            else:
+                dists_4nn.append(np.nan)
+            
+        dists_nn = np.array(dists_nn) 
+        dists_4nn = np.array(dists_4nn)   
+        
+        return dists_nn, dists_4nn 
     
     
     
@@ -267,6 +262,9 @@ class ExtractData:
             occupancy_r40, occupancy_with_vessels_r40 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 40.0)
             occupancy_r50, occupancy_with_vessels_r50 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 50.0)
             
+            
+            dists_nn, dists_4nn = self.calculate_nearest_neighbours(MP_pos)
+            
 
             df_cells = df_cells.append(pd.DataFrame({'distance_vessels': distances,
                                             'distance_thin_vessel': distances_thin,
@@ -287,6 +285,8 @@ class ExtractData:
                                             'occupancy_with_vessels_r40' : occupancy_with_vessels_r40,
                                             'occupancy_r50' : occupancy_r50,
                                             'occupancy_with_vessels_r50' : occupancy_with_vessels_r50,
+                                            'nearest_neighbour' : dists_nn,
+                                            '4nearest_neighbour' : dists_4nn,
                                             'vessel_file': fn_['analysis_file_vessels'],
                                             'vessel_density': 1 - np.sum(vessel_im_all) / (np.shape(vessel_im_all)[0] * np.shape(vessel_im_all)[1]),
                                             'tumor_type': fn_['tumor_type'],
@@ -341,8 +341,11 @@ class ExtractData:
                 occupancy_r10, occupancy_with_vessels_r10 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 10.0)
                 occupancy_r20, occupancy_with_vessels_r20 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 20.0)
                 occupancy_r30, occupancy_with_vessels_r30 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 30.0)
-                occupancy_r40, occupancy_with_vessels_r40 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 40.0)
-                occupancy_r50, occupancy_with_vessels_r50 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 50.0)
+                occupancy_r40, occupancy_with_vessels_r40 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 40.0)
+                occupancy_r50, occupancy_with_vessels_r50 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 50.0)
+                
+                
+                dists_nn, dists_4nn = self.calculate_nearest_neighbours(MP_pos_GFP)
 
                 df_cells = df_cells.append(pd.DataFrame({'distance_vessels': distances_GFP,
                                                 'distance_thin_vessel': distances_thin_GFP,
@@ -363,6 +366,8 @@ class ExtractData:
                                                 'occupancy_with_vessels_r40' : occupancy_with_vessels_r40,
                                                 'occupancy_r50' : occupancy_r50,
                                                 'occupancy_with_vessels_r50' : occupancy_with_vessels_r50,
+                                                'nearest_neighbour' : dists_nn,
+                                                '4nearest_neighbour' : dists_4nn,
                                                 'vessel_file': fn_['analysis_file_vessels'],
                                                 'vessel_density': 1 - np.sum(vessel_im_all) / (np.shape(vessel_im_all)[0] * np.shape(vessel_im_all)[1]),
                                                 'tumor_type': fn_['tumor_type'],
