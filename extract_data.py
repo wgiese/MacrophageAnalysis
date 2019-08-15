@@ -30,7 +30,7 @@ class ExtractData:
         '''
         
         occupancy_radius_pixel = int(radius_mum*pixel_per_mum)
-        sample_points = 1000
+        sample_points = 10000
         
         x_ext = np.array(vessel_im_dist_transform).shape[0]-1
         y_ext = np.array(vessel_im_dist_transform).shape[1]-1
@@ -118,7 +118,7 @@ class ExtractData:
         return occupancy, occupancy_with_vessels
     
     
-    def calculate_nearest_neighbours(self,MP_pos):
+    def calculate_nearest_neighbours(self, MP_pos, pixel_per_mum = 1024.0/445.0):
         
         dists_nn = []
         dists_4nn = []
@@ -144,8 +144,8 @@ class ExtractData:
             else:
                 dists_4nn.append(np.nan)
             
-        dists_nn = np.array(dists_nn) 
-        dists_4nn = np.array(dists_4nn)   
+        dists_nn = np.array(dists_nn)/pixel_per_mum  
+        dists_4nn = np.array(dists_4nn)/pixel_per_mum    
         
         return dists_nn, dists_4nn 
     
