@@ -15,13 +15,13 @@ sys.path.append(root_directory)
 
 import MacrophageAnalysis.extract_data as extract_data
 
-data_directory = '/media/wgiese/DATA/Projects/Petya/for_wolfgang/'
+data_directory = '/media/wgiese/DATA/Projects/Petya/for_wolfgang_oct19/'
 
 f = extract_data.ExtractData(data_directory)
 
-df_GFP, df_images_GFP = f.prepare_data(subfolder_name = 'analysis_GFP_all/', key_file = 'overview_GFP_all.xlsx', GFP_flag = True)
+df_GFP, df_images_GFP = f.prepare_data(subfolder_name = 'analysis_GFP_all/', key_file = 'overview_surv_cells_newdata.xlsx', GFP_flag = True)
 
-df_all, df_images_all = f.prepare_data(subfolder_name = 'analysis_2wk4wk/', key_file = 'overview_2wk_4wk.xlsx', GFP_flag = False)
+df_all, df_images_all = f.prepare_data(subfolder_name = 'analysis_2wk4wk/', key_file = 'overview_2wk_4wk_corrected_size.xlsx', GFP_flag = False)
 
 
 df_all.to_csv(root_directory + 'output/df_all.csv')
