@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="347.72739mm"
-   height="218.16942mm"
-   viewBox="0 0 347.72739 218.16942"
+   height="226.11295mm"
+   viewBox="0 0 347.72739 226.11294"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -192,8 +192,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.75187991"
-     inkscape:cx="639.75182"
-     inkscape:cy="375.18034"
+     inkscape:cx="430.94188"
+     inkscape:cy="405.20306"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -209,19 +209,24 @@
      fit-margin-right="0"
      fit-margin-bottom="0">
     <sodipodi:guide
-       position="0.4182257,121.7878"
+       position="0.41822608,129.73131"
        orientation="1,0"
        id="guide953"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="223.1019,209.37797"
+       position="223.1019,217.32149"
        orientation="1,0"
        id="guide9059"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="62.767498,201.30516"
+       position="62.767498,209.24868"
        orientation="0,1"
        id="guide9138"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-98.882703,216.41587"
+       orientation="0,1"
+       id="guide1293"
        inkscape:locked="false" />
   </sodipodi:namedview>
   <metadata
@@ -242,7 +247,7 @@
      id="layer1"
      transform="translate(-16.824665,-29.597037)">
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51906192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.51906192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect10"
        width="62.007965"
        height="42.764111"
@@ -253,12 +258,12 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="32.374409"
+       x="32.726303"
        y="37.478218"
        id="text834"><tspan
          sodipodi:role="line"
          id="tspan832"
-         x="32.374409"
+         x="32.726303"
          y="37.478218"
          style="stroke-width:0.26458332">Input</tspan></text>
     <text
@@ -274,7 +279,7 @@
          style="stroke-width:0.26458332" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="20.058056"
        y="56.303318"
        id="text869"><tspan
@@ -282,24 +287,24 @@
          id="tspan867"
          x="20.058056"
          y="56.303318"
-         style="font-size:6.3499999px;stroke-width:0.26458332">Metafile </tspan><tspan
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;">Metafile </tspan><tspan
          sodipodi:role="line"
          x="20.058056"
          y="64.240814"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan871">(.xls, xlsx, or .csv) </tspan><tspan
          sodipodi:role="line"
          x="20.058056"
          y="72.178314"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan873">with info on </tspan><tspan
          sodipodi:role="line"
          x="20.058056"
          y="80.115814"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan875">experiments</tspan></text>
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51906192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.51906192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect10-7"
        width="62.007965"
        height="42.764114"
@@ -309,7 +314,7 @@
        ry="9.6219254" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f9f9f9;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="21.741421"
        y="114.77388"
        id="text869-5"><tspan
@@ -317,29 +322,29 @@
          id="tspan867-3"
          x="21.741421"
          y="114.77388"
-         style="font-size:6.3499999px;stroke-width:0.26458332">Series of images</tspan><tspan
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#f9f9f9;">Series of images</tspan><tspan
          sodipodi:role="line"
          x="21.741421"
          y="122.71138"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#f9f9f9;"
          id="tspan873-6">(.tif) containing </tspan><tspan
          sodipodi:role="line"
          x="21.741421"
          y="130.64888"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#f9f9f9;"
          id="tspan934">segemented </tspan><tspan
          sodipodi:role="line"
          x="21.741421"
          y="138.58638"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#f9f9f9;"
          id="tspan936">vessels </tspan><tspan
          sodipodi:role="line"
          x="21.741421"
          y="146.52388"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#f9f9f9;"
          id="tspan875-2" /></text>
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51906192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.51900005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect10-7-9"
        width="62.007965"
        height="42.764114"
@@ -349,29 +354,29 @@
        ry="9.6219254" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="19.937494"
        y="173.98389"
        id="text869-5-1"><tspan
          sodipodi:role="line"
          x="19.937494"
          y="173.98389"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan936-9">X-Y positions of </tspan><tspan
          sodipodi:role="line"
          x="19.937494"
          y="181.92139"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan994">macrophages </tspan><tspan
          sodipodi:role="line"
          x="19.937494"
          y="189.85889"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan996">(.xls, xlsx, or .csv) </tspan><tspan
          sodipodi:role="line"
          x="19.937494"
          y="197.79639"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan875-2-3" /></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL)"
@@ -379,16 +384,16 @@
        id="path1017"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.10436785;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.10436785;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect10-7-7"
        width="83.321442"
        height="16.820807"
        x="105.32423"
        y="116.7056"
-       rx="12.929188"
+       rx="0"
        ry="0" />
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.35876858;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.35876858;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect10-9"
        width="62.168259"
        height="34.127014"
@@ -398,33 +403,33 @@
        ry="7.6785779" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="206.4528"
-       y="80.898254"
+       y="83.014923"
        id="text869-5-2"><tspan
          sodipodi:role="line"
          x="206.4528"
-         y="80.898254"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         y="83.014923"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan936-7">detailed results </tspan><tspan
          sodipodi:role="line"
          x="206.4528"
-         y="88.835754"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         y="90.952423"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan9025">with features per</tspan><tspan
          sodipodi:role="line"
          x="206.4528"
-         y="96.773254"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         y="98.889923"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan9027">macrophage (.csv)</tspan><tspan
          sodipodi:role="line"
          x="206.4528"
-         y="104.71075"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         y="106.82742"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan875-2-5" /></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="106.6244"
        y="122.81161"
        id="text1627"><tspan
@@ -432,24 +437,24 @@
          id="tspan1625"
          x="106.6244"
          y="122.81161"
-         style="stroke-width:0.26458332">Extract selected features via</tspan><tspan
+         style="stroke-width:0.26458332;fill:#ffffff;">Extract selected features via</tspan><tspan
          sodipodi:role="line"
          x="106.6244"
          y="129.86716"
-         style="stroke-width:0.26458332"
+         style="stroke-width:0.26458332;fill:#ffffff;"
          id="tspan1629">&quot;extract_features.py&quot;</tspan></text>
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.48775876;stroke-miterlimit:4;stroke-dasharray:8.92655263, 8.92655263;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-miterlimit:4;stroke-dasharray:6, 1.50000000000000000;stroke-dashoffset:0;stroke-opacity:1"
        id="rect10-3"
        width="62.060078"
        height="39.297272"
        x="17.682785"
-       y="207.72531"
+       y="215.6627"
        rx="9.6300125"
        ry="10.411935" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:1.05130458;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6.30782712, 2.10260904;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleOutL-1)"
-       d="m 81.072427,226.38627 c 65.215483,2.90799 66.314373,3.73169 64.748823,-87.12025"
+       style="fill:none;stroke:#000000;stroke-width:1.051;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6.306, 2.102;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleOutL-1)"
+       d="M 80.368636,235.18366 C 146.63981,234.2208 147.0349,233.98881 145.82125,139.26602"
        id="path1017-7"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -467,32 +472,32 @@
        sodipodi:nodetypes="cc" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="20.761848"
-       y="217.11967"
+       y="226.11539"
        id="text8854"><tspan
          sodipodi:role="line"
          id="tspan8852"
          x="20.761848"
-         y="217.11967"
-         style="font-size:6.3499999px;stroke-width:0.26458332">Parameter file </tspan><tspan
+         y="226.11539"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;">Parameter file </tspan><tspan
          sodipodi:role="line"
          x="20.761848"
-         y="225.05717"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         y="234.05289"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan8856">with optional user </tspan><tspan
          sodipodi:role="line"
          x="20.761848"
-         y="232.99467"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         y="241.99039"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan8858">adjustments </tspan><tspan
          sodipodi:role="line"
          x="20.761848"
-         y="240.93217"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         y="249.92789"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan8864">(.json)</tspan></text>
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.45709634;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.45709634;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect10-9-0"
        width="62.069931"
        height="39.307121"
@@ -502,53 +507,42 @@
        ry="8.8441019" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="213.86105"
        y="153.03293"
        id="text869-5-2-6"><tspan
          sodipodi:role="line"
          x="213.86105"
          y="153.03293"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan936-7-3">summarized </tspan><tspan
          sodipodi:role="line"
          x="213.86105"
          y="160.97043"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan9025-2">results with </tspan><tspan
          sodipodi:role="line"
          x="213.86105"
          y="168.90793"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan11974">features per</tspan><tspan
          sodipodi:role="line"
          x="213.86105"
          y="176.84543"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan9061">tumor (.csv) </tspan><tspan
          sodipodi:role="line"
          x="213.86105"
          y="184.78293"
-         style="font-size:6.3499999px;stroke-width:0.26458332"
+         style="font-size:6.3499999px;stroke-width:0.26458332;fill:#ffffff;"
          id="tspan875-2-5-6" /></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="282.49448"
-       y="127.05106"
-       id="text1627-5"><tspan
-         sodipodi:role="line"
-         x="282.49448"
-         y="127.05106"
-         style="stroke-width:0.26458332"
-         id="tspan9089">plot scripts for visualization</tspan></text>
     <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.10436785;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.10436785;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect10-7-7-5"
        width="83.321442"
        height="16.820807"
-       x="280.67844"
-       y="116.54767"
+       x="280.67847"
+       y="117.07687"
        rx="0"
        ry="0" />
     <path
@@ -586,5 +580,16 @@
          x="215.78323"
          y="37.451855"
          style="stroke-width:0.26458332">Output</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="283.32843"
+       y="126.71648"
+       id="text1627-5"><tspan
+         sodipodi:role="line"
+         x="283.32843"
+         y="126.71648"
+         style="fill:#ffffff;stroke-width:0.26458332"
+         id="tspan9089">plot scripts for visualization</tspan></text>
   </g>
 </svg>
