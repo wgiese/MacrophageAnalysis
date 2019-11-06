@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="346.66904mm"
+   height="218.5327mm"
+   viewBox="0 0 346.66904 218.5327"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="workflow.svg">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1161"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL-9"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1161-2"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL-8"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1161-9"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL-1"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1161-94"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL-84"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1161-5"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL-3"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path1161-6"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL-6"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1161-93"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL-6-5"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1161-93-2"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL-6-4"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1161-93-7"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL-6-43"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1161-93-0"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutL-6-8"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1161-93-6"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         transform="scale(0.8)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.75187991"
+     inkscape:cx="639.75182"
+     inkscape:cy="375.18033"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <sodipodi:guide
+       position="0.41822581,121.78779"
+       orientation="1,0"
+       id="guide953"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="223.10189,209.37796"
+       orientation="1,0"
+       id="guide9059"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="62.767496,201.30515"
+       orientation="0,1"
+       id="guide9138"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-16.824665,-29.23376)">
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51906192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10"
+       width="62.007965"
+       height="42.764111"
+       x="17.584196"
+       y="46.461311"
+       rx="9.6219254"
+       ry="9.6219254" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="32.374409"
+       y="37.478218"
+       id="text834"><tspan
+         sodipodi:role="line"
+         id="tspan832"
+         x="32.374409"
+         y="37.478218"
+         style="stroke-width:0.26458332">Input</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="114.01422"
+       y="62.63744"
+       id="text865"><tspan
+         sodipodi:role="line"
+         id="tspan863"
+         x="114.01422"
+         y="72.001205"
+         style="stroke-width:0.26458332" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="20.058056"
+       y="56.303318"
+       id="text869"><tspan
+         sodipodi:role="line"
+         id="tspan867"
+         x="20.058056"
+         y="56.303318"
+         style="font-size:6.3499999px;stroke-width:0.26458332">Metafile </tspan><tspan
+         sodipodi:role="line"
+         x="20.058056"
+         y="64.240814"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan871">(.xls, xlsx, or .csv) </tspan><tspan
+         sodipodi:role="line"
+         x="20.058056"
+         y="72.178314"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan873">with info on </tspan><tspan
+         sodipodi:role="line"
+         x="20.058056"
+         y="80.115814"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan875">experiments</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51906192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10-7"
+       width="62.007965"
+       height="42.764114"
+       x="17.936092"
+       y="102.95994"
+       rx="9.6219254"
+       ry="9.6219254" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="21.741421"
+       y="114.77388"
+       id="text869-5"><tspan
+         sodipodi:role="line"
+         id="tspan867-3"
+         x="21.741421"
+         y="114.77388"
+         style="font-size:6.3499999px;stroke-width:0.26458332">Series of images</tspan><tspan
+         sodipodi:role="line"
+         x="21.741421"
+         y="122.71138"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan873-6">(.tif) containing </tspan><tspan
+         sodipodi:role="line"
+         x="21.741421"
+         y="130.64888"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan934">segemented </tspan><tspan
+         sodipodi:role="line"
+         x="21.741421"
+         y="138.58638"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan936">vessels </tspan><tspan
+         sodipodi:role="line"
+         x="21.741421"
+         y="146.52388"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan875-2" /></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.51906192;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10-7-9"
+       width="62.007965"
+       height="42.764114"
+       x="17.7349"
+       y="159.14044"
+       rx="9.6219254"
+       ry="9.6219254" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="19.937494"
+       y="173.98389"
+       id="text869-5-1"><tspan
+         sodipodi:role="line"
+         x="19.937494"
+         y="173.98389"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan936-9">X-Y positions of </tspan><tspan
+         sodipodi:role="line"
+         x="19.937494"
+         y="181.92139"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan994">macrophages </tspan><tspan
+         sodipodi:role="line"
+         x="19.937494"
+         y="189.85889"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan996">(.xls, xlsx, or .csv) </tspan><tspan
+         sodipodi:role="line"
+         x="19.937494"
+         y="197.79639"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan875-2-3" /></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL)"
+       d="M 80.232228,66.156397 118.23697,111.90284"
+       id="path1017"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.10436785;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10-7-7"
+       width="83.321442"
+       height="16.820807"
+       x="105.32423"
+       y="116.7056"
+       rx="12.929188"
+       ry="0" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.35876858;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10-9"
+       width="62.168259"
+       height="34.127014"
+       x="203.98222"
+       y="72.845856"
+       rx="9.6467981"
+       ry="7.6785779" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="206.4528"
+       y="80.898254"
+       id="text869-5-2"><tspan
+         sodipodi:role="line"
+         x="206.4528"
+         y="80.898254"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan936-7">detailed results </tspan><tspan
+         sodipodi:role="line"
+         x="206.4528"
+         y="88.835754"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan9025">with features per</tspan><tspan
+         sodipodi:role="line"
+         x="206.4528"
+         y="96.773254"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan9027">macrophage (.csv)</tspan><tspan
+         sodipodi:role="line"
+         x="206.4528"
+         y="104.71075"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan875-2-5" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="106.6244"
+       y="122.81161"
+       id="text1627"><tspan
+         sodipodi:role="line"
+         id="tspan1625"
+         x="106.6244"
+         y="122.81161"
+         style="stroke-width:0.26458332">Extract selected features via</tspan><tspan
+         sodipodi:role="line"
+         x="106.6244"
+         y="129.86716"
+         style="stroke-width:0.26458332"
+         id="tspan1629">&quot;extract_features.py&quot;</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.48775876;stroke-miterlimit:4;stroke-dasharray:8.92655263, 8.92655263;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect10-3"
+       width="62.060078"
+       height="39.297272"
+       x="17.682785"
+       y="207.72531"
+       rx="9.6300125"
+       ry="10.411935" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.05130458;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6.30782712, 2.10260904;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#TriangleOutL-1)"
+       d="m 81.072427,226.38627 c 65.215483,2.90799 66.314373,3.73169 64.748823,-87.12025"
+       id="path1017-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-84)"
+       d="m 79.312949,126.06464 20.058063,0.3519"
+       id="path1017-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-3)"
+       d="m 80.016741,179.90469 38.356649,-41.8756"
+       id="path1017-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="20.761848"
+       y="217.11967"
+       id="text8854"><tspan
+         sodipodi:role="line"
+         id="tspan8852"
+         x="20.761848"
+         y="217.11967"
+         style="font-size:6.3499999px;stroke-width:0.26458332">Parameter file </tspan><tspan
+         sodipodi:role="line"
+         x="20.761848"
+         y="225.05717"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan8856">with optional user </tspan><tspan
+         sodipodi:role="line"
+         x="20.761848"
+         y="232.99467"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan8858">adjustments </tspan><tspan
+         sodipodi:role="line"
+         x="20.761848"
+         y="240.93217"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan8864">(.json)</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.45709634;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10-9-0"
+       width="62.069931"
+       height="39.307121"
+       x="204.03403"
+       y="143.45012"
+       rx="9.6315403"
+       ry="8.8441019" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:6.3499999px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="213.86105"
+       y="153.03293"
+       id="text869-5-2-6"><tspan
+         sodipodi:role="line"
+         x="213.86105"
+         y="153.03293"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan936-7-3">summarized </tspan><tspan
+         sodipodi:role="line"
+         x="213.86105"
+         y="160.97043"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan9025-2">results with </tspan><tspan
+         sodipodi:role="line"
+         x="213.86105"
+         y="168.90793"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan11974">features per</tspan><tspan
+         sodipodi:role="line"
+         x="213.86105"
+         y="176.84543"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan9061">tumor (.csv) </tspan><tspan
+         sodipodi:role="line"
+         x="213.86105"
+         y="184.78293"
+         style="font-size:6.3499999px;stroke-width:0.26458332"
+         id="tspan875-2-5-6" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="282.49448"
+       y="127.05106"
+       id="text1627-5"><tspan
+         sodipodi:role="line"
+         x="282.49448"
+         y="127.05106"
+         style="stroke-width:0.26458332"
+         id="tspan9089">plot scripts for visualization</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.10436785;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10-7-7-5"
+       width="83.321442"
+       height="16.820807"
+       x="280.67844"
+       y="116.54767"
+       rx="0"
+       ry="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-6)"
+       d="M 188.64566,116.7056 201.00254,93.722093"
+       id="path1017-74"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-6-5)"
+       d="m 188.64566,133.5264 12.19577,26.65932"
+       id="path1017-74-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-6-43)"
+       d="m 265.6757,161.64368 12.35688,-22.98351"
+       id="path1017-74-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#TriangleOutL-6-8)"
+       d="m 265.67571,88.801656 12.35688,22.983484"
+       id="path1017-74-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="215.78323"
+       y="37.451855"
+       id="text834-8"><tspan
+         sodipodi:role="line"
+         id="tspan832-4"
+         x="215.78323"
+         y="37.451855"
+         style="stroke-width:0.26458332">Output</tspan></text>
+  </g>
+</svg>
