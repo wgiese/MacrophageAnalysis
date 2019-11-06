@@ -1,0 +1,9 @@
+{
+    "data_directory": "/directory/to/your/data/",
+    "meta_data_file_1" : "meta_file_1",
+    "subfolder_vessel_images_1" : "subfolder_1",
+    "channels_dataset_1" : ["channel_name_1"],
+    "meta_data_file_2" : "meta_file_1",
+    "subfolder_vessel_images_2" : "subfolder_2",
+    "channels_dataset_2"  : ["channel_name_1","channel_name_2"]
+}

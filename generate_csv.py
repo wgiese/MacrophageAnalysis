@@ -10,20 +10,28 @@ from skimage.measure import label, regionprops
 from skimage.io import imread, imshow
 from skimage.morphology import skeletonize
 
-root_directory = "/media/wgiese/DATA/Projects/Petya/"
-sys.path.append(root_directory)
+import json
+import argparse
+import extract_data
 
-import MacrophageAnalysis.extract_data as extract_data
+ 
+# construct the argument parse and parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument("-p", "--parameter_file", required=True,
+	help="provide parameter file! start with python generate_csv.py -p [name_of_parameter_file]")
+args = vars(ap.parse_args())
 
-data_directory = '/media/wgiese/DATA/Projects/Petya/for_wolfgang_oct19/'
+parameter_file = args["parameter_file"]
+
+with open(parameter_file) as f:
+    d = json.load(f)
 
 f = extract_data.ExtractData(data_directory)
 
-df_GFP, df_images_GFP = f.prepare_data(subfolder_name = 'analysis_GFP_all/', key_file = 'overview_surv_cells_newdata.xlsx', GFP_flag = True)
+df_GFP, df_images_GFP = f.prepare_data(subfolder_name = d["subfolder_vessel_images_2"], key_file = d["meta_data_file_2"] , GFP_flag = True)
+df_all, df_images_all = f.prepare_data(subfolder_name = d["subfolder_vessel_images_1"], key_file = d["meta_data_file_1"], GFP_flag = False)
 
-df_all, df_images_all = f.prepare_data(subfolder_name = 'analysis_2wk4wk/', key_file = 'overview_2wk_4wk_corrected_size.xlsx', GFP_flag = False)
 
-
-df_all.to_csv(root_directory + 'output/df_all.csv')
-df_GFP.to_csv(root_directory + 'output/df_GFP.csv')
+#df_all.to_csv(root_directory + 'output/df_all.csv')
+#df_GFP.to_csv(root_directory + 'output/df_GFP.csv')
 
