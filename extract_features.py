@@ -14,7 +14,7 @@ from skimage.morphology import skeletonize
 
 import json
 import argparse
-import extract_data
+import extract_functions
 
  
 # construct the argument parse and parse the arguments
@@ -28,7 +28,7 @@ parameter_file = args["parameter_file"]
 with open(parameter_file) as f:
     parameters = json.load(f)
 
-f = extract_data.ExtractData(parameters)
+f = extract_functions.ExtractData(parameters)
 
 df, df_images = f.prepare_data()
 
