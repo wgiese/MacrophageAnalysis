@@ -17,9 +17,10 @@ class ExtractData:
     import MacrophageAnalysis.data_loader as data_loader
     """
 
-    def __init__(self, rootfolder_name_):
+    def __init__(self, parameters):
 
-        self.rootfolder_name = rootfolder_name_
+        self.parameters = parameters
+        self.rootfolder_name = parameters["data_directory"]
 
 
     def calculate_occupancy(self, MP_pos, vessel_im_dist_transform, radius_mum = 10.0, pixel_per_mum = 1024.0/445.0 ):
@@ -152,8 +153,15 @@ class ExtractData:
     
     
     
-    def prepare_data(self, subfolder_name = 'analysis_GFP_all/', key_file = 'overview_GFP_all.xlsx', GFP_flag = True):
+    def prepare_data(self):
         
+        
+        subfolder_name = self.parameters["subfolder_vessel_images"] 
+        key_file = self.parameters["meta_data_file"] 
+        if (len(self.parameters["macrophage_channel"]) > 1):
+            GFP_flag = True
+        else:
+            GFP_flag = False
         
         overview_file = pd.read_excel(self.rootfolder_name + key_file)
         
@@ -256,11 +264,11 @@ class ExtractData:
             distances_thin_norm_excl_vsl = distances_thin/norm_thin_value
             distances_thick_norm_excl_vsl = distances_thick/norm_thick_value 
             
-            occupancy_r10, occupancy_with_vessels_r10 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 10.0)
-            occupancy_r20, occupancy_with_vessels_r20 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 20.0)
-            occupancy_r30, occupancy_with_vessels_r30 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 30.0)
-            occupancy_r40, occupancy_with_vessels_r40 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 40.0)
-            occupancy_r50, occupancy_with_vessels_r50 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 50.0)
+            occupancy, occupancy_with_vessels = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = self.parameters["occupancy_radius"])
+            #occupancy_r20, occupancy_with_vessels_r20 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 20.0)
+            #occupancy_r30, occupancy_with_vessels_r30 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 30.0)
+            #occupancy_r40, occupancy_with_vessels_r40 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 40.0)
+            #occupancy_r50, occupancy_with_vessels_r50 = self.calculate_occupancy(MP_pos,vessel_im_dist_transform, radius_mum = 50.0)
             
             
             dists_nn, dists_4nn = self.calculate_nearest_neighbours(MP_pos)
@@ -275,16 +283,8 @@ class ExtractData:
                                             'distance_vessels_norm(excl.vsl.)': distances_norm_excl_vsl,
                                             'distance_thin_vessel_norm(excl.vsl.)': distances_thin_norm_excl_vsl,
                                             'distance_thick_vessel_norm(excl.vsl.)': distances_thick_norm_excl_vsl,
-                                            'occupancy_r10' : occupancy_r10,
-                                            'occupancy_with_vessels_r10' : occupancy_with_vessels_r10,
-                                            'occupancy_r20' : occupancy_r20,
-                                            'occupancy_with_vessels_r20' : occupancy_with_vessels_r20,
-                                            'occupancy_r30' : occupancy_r30,
-                                            'occupancy_with_vessels_r30' : occupancy_with_vessels_r30,
-                                            'occupancy_r40' : occupancy_r40,
-                                            'occupancy_with_vessels_r40' : occupancy_with_vessels_r40,
-                                            'occupancy_r50' : occupancy_r50,
-                                            'occupancy_with_vessels_r50' : occupancy_with_vessels_r50,
+                                            'occupancy_' : occupancy,
+                                            'occupancy_with_vessels' : occupancy_with_vessels,
                                             'nearest_neighbour' : dists_nn,
                                             '4nearest_neighbour' : dists_4nn,
                                             'vessel_file': fn_['analysis_file_vessels'],
@@ -338,11 +338,11 @@ class ExtractData:
                 distances_thick_GFP_norm_excl_vsl = distances_thick_GFP/norm_thick_value 
                 
                 
-                occupancy_r10, occupancy_with_vessels_r10 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 10.0)
-                occupancy_r20, occupancy_with_vessels_r20 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 20.0)
-                occupancy_r30, occupancy_with_vessels_r30 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 30.0)
-                occupancy_r40, occupancy_with_vessels_r40 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 40.0)
-                occupancy_r50, occupancy_with_vessels_r50 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 50.0)
+                occupancy, occupancy_with_vessels = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = self.parameters["occupancy_radius"])
+                #occupancy_r20, occupancy_with_vessels_r20 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 20.0)
+                #occupancy_r30, occupancy_with_vessels_r30 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 30.0)
+                #occupancy_r40, occupancy_with_vessels_r40 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 40.0)
+                #occupancy_r50, occupancy_with_vessels_r50 = self.calculate_occupancy(MP_pos_GFP,vessel_im_dist_transform, radius_mum = 50.0)
                 
                 
                 dists_nn, dists_4nn = self.calculate_nearest_neighbours(MP_pos_GFP)
@@ -356,16 +356,8 @@ class ExtractData:
                                                 'distance_vessels_norm(excl.vsl.)': distances_GFP_norm_excl_vsl,
                                                 'distance_thin_vessel_norm(excl.vsl.)': distances_thin_GFP_norm_excl_vsl,
                                                 'distance_thick_vessel_norm(excl.vsl.)': distances_thick_GFP_norm_excl_vsl,
-                                                'occupancy_r10' : occupancy_r10,
-                                                'occupancy_with_vessels_r10' : occupancy_with_vessels_r10,
-                                                'occupancy_r20' : occupancy_r20,
-                                                'occupancy_with_vessels_r20' : occupancy_with_vessels_r20,
-                                                'occupancy_r30' : occupancy_r30,
-                                                'occupancy_with_vessels_r30' : occupancy_with_vessels_r30,
-                                                'occupancy_r40' : occupancy_r40,
-                                                'occupancy_with_vessels_r40' : occupancy_with_vessels_r40,
-                                                'occupancy_r50' : occupancy_r50,
-                                                'occupancy_with_vessels_r50' : occupancy_with_vessels_r50,
+                                                'occupancy' : occupancy,
+                                                'occupancy_with_vessels' : occupancy_with_vessels,
                                                 'nearest_neighbour' : dists_nn,
                                                 '4nearest_neighbour' : dists_4nn,
                                                 'vessel_file': fn_['analysis_file_vessels'],

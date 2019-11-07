@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import numpy as np
 import seaborn as sns
@@ -24,12 +26,22 @@ args = vars(ap.parse_args())
 parameter_file = args["parameter_file"]
 
 with open(parameter_file) as f:
-    d = json.load(f)
+    parameters = json.load(f)
 
-f = extract_data.ExtractData(data_directory)
+f = extract_data.ExtractData(parameters)
 
-df_GFP, df_images_GFP = f.prepare_data(subfolder_name = d["subfolder_vessel_images_2"], key_file = d["meta_data_file_2"] , GFP_flag = True)
-df_all, df_images_all = f.prepare_data(subfolder_name = d["subfolder_vessel_images_1"], key_file = d["meta_data_file_1"], GFP_flag = False)
+df, df_images = f.prepare_data()
+
+
+filename = "results"
+for label in parameters:
+    filename += label
+    
+filename += ".csv"
+
+df.to_csv(parameters["output_directory"] + filename)
+
+#df_all, df_images_all = f.prepare_data(subfolder_name = parameter["subfolder_vessel_images_1"], key_file = parameter["meta_data_file_1"], GFP_flag = False)
 
 
 #df_all.to_csv(root_directory + 'output/df_all.csv')
