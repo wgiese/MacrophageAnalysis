@@ -1,6 +1,7 @@
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+import matplotlib
 
 import pandas as pd
 from scipy.ndimage.morphology import distance_transform_edt
@@ -8,6 +9,8 @@ from joblib import Parallel, delayed
 from skimage.measure import label, regionprops
 from skimage.io import imread, imshow
 from skimage.morphology import skeletonize
+import scipy.misc
+
 
 
 class ExtractData:
@@ -217,6 +220,10 @@ class ExtractData:
             vessel_im_dist_thin_transform = distance_transform_edt((vessel_im_thin==0).astype(int))*fn_['x_resolution [um]']/pixel_dimension
             vessel_im_dist_thick_transform = distance_transform_edt((vessel_im_thick==0).astype(int))*fn_['x_resolution [um]']/pixel_dimension
 
+            matplotlib.rcParams['image.cmap'] = "gray"
+            matplotlib.image.imsave(self.parameters["output_directory"] + str(_)+ "_distance_transform.jpg",distance_transform_edt(vessel_im_all))
+            print(distance_transform_edt(vessel_im_all))
+
             vessel_number = len(np.unique(vessel_widths_1))-1
             vessel_number_thin = len(np.unique(vessel_im_thin))-1
             vessel_number_thick = len(np.unique(vessel_im_thick))-1
@@ -242,7 +249,7 @@ class ExtractData:
                                             'distance_thick_vessel': distances_thick,
                                             'distance_vessels_norm': distances_norm,
                                             'distance_vessels_norm(excl.vsl.)': distances_norm_excl_vsl,
-                                            'occupancy_' : occupancy,
+                                            'occupancy' : occupancy,
                                             'occupancy_with_vessels' : occupancy_with_vessels,
                                             'nearest_neighbour' : dists_nn,
                                             '4nearest_neighbour' : dists_4nn,

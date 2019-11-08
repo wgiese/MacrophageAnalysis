@@ -41,11 +41,11 @@ extract selected features per macrophage and per mouse
 '''
 
 
-columns = ['mouse_name','MP_type','vessel_file','tumor_type',parameters["selected_feature"]]
+columns = ['mouse_name','MP_type','vessel_file','tumor_type',*parameters["selected_feature"]]
 df_selected =  df[columns]
 
 
-df_selected.to_csv(parameters["output_directory"] + parameters["selected_feature"] + "_per_macrophage"+ "_".join(parameters["macrophage_channel"]) + ".csv")
+df_selected.to_csv(parameters["output_directory"] + "_".join(parameters["selected_feature"]) + "_per_macrophage"+ "_".join(parameters["macrophage_channel"]) + ".csv")
 df_selected_per_mouse = pd.DataFrame()
 
 
@@ -53,7 +53,7 @@ counter = 0
 for mouse in df_selected['mouse_name'].unique():
     df_mouse = df_selected[df_selected['mouse_name']==mouse]
     
-    for MP_type in df_raw['MP_type'].unique():
+    for MP_type in df_selected['MP_type'].unique():
         df_MP_type = df_mouse[df_mouse['MP_type']==MP_type]
         
         if(len(df_MP_type)<1):
@@ -70,5 +70,5 @@ for mouse in df_selected['mouse_name'].unique():
         counter += 1
         
     
-df_selected_per_mouse.to_csv(parameters["output_directory"] + parameters["selected_feature"] + "_per_mouse"+ "_".join(parameters["macrophage_channel"]) + ".csv")
+df_selected_per_mouse.to_csv(parameters["output_directory"] + "_".join(parameters["selected_feature"]) + "_per_mouse"+ "_".join(parameters["macrophage_channel"]) + ".csv")
 
