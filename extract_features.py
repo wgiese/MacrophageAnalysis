@@ -14,13 +14,14 @@ from skimage.morphology import skeletonize
 
 import json
 import argparse
-import extract_functions
+import data_processing
 
  
-# construct the argument parse and parse the arguments
+# parse the arguments
 ap = argparse.ArgumentParser()
 ap.add_argument("-p", "--parameter_file", required=True,
-	help="provide parameter file! start with python generate_csv.py -p [name_of_parameter_file]")
+	help="provide parameter file! start with ./generate_csv.py -p [name_of_parameter_file]")
+
 args = vars(ap.parse_args())
 
 parameter_file = args["parameter_file"]
@@ -28,17 +29,46 @@ parameter_file = args["parameter_file"]
 with open(parameter_file) as f:
     parameters = json.load(f)
 
-f = extract_functions.ExtractData(parameters)
+f = data_processing.ExtractData(parameters)
 
 df, df_images = f.prepare_data()
 
+df.to_csv(parameters["output_directory"] + "raw_results_" +"_".join(parameters["macrophage_channel"]) + ".csv")
 
-filename = "results"
-for label in parameters["macrophage_channel"]:
-    filename += label
+
+'''
+extract selected features per macrophage and per mouse
+'''
+
+
+columns = ['mouse_name','MP_type','vessel_file','tumor_type',parameters["selected_feature"]]
+df_selected =  df[columns]
+
+
+df_selected.to_csv(parameters["output_directory"] + parameters["selected_feature"] + "_per_macrophage"+ "_".join(parameters["macrophage_channel"]) + ".csv")
+df_selected_per_mouse = pd.DataFrame()
+
+
+counter = 0
+for mouse in df_selected['mouse_name'].unique():
+    df_mouse = df_selected[df_selected['mouse_name']==mouse]
     
-filename += ".csv"
-
-df.to_csv(parameters["output_directory"] + filename)
-
+    for MP_type in df_raw['MP_type'].unique():
+        df_MP_type = df_mouse[df_mouse['MP_type']==MP_type]
+        
+        if(len(df_MP_type)<1):
+            continue
+        
+        df_selected_per_mouse.at[counter, 'mouse_name'] = mouse
+        df_selected_per_mouse.at[counter, 'MP_type'] = MP_type
+        df_selected_per_mouse.at[counter, 'tumor_type'] = df_MP_type['tumor_type'].unique()[0]
+        df_selected_per_mouse.at[counter, 'distance to vessel(mean) [um]'] = df_MP_type['distance_vessels'].mean()
+        df_selected_per_mouse.at[counter, 'distance to vessel(SD) [um]'] = df_MP_type['distance_vessels'].std()
+        df_selected_per_mouse.at[counter, '#images'] = len(df_MP_type['vessel_file'].unique())
+        df_selected_per_mouse.at[counter, '#macrophages'] = len(list(df_MP_type['distance_vessels']))
+      
+        counter += 1
+        
+    
+df_selected_per_mouse.to_csv(parameters["output_directory"] + parameters["selected_feature"] + "_per_mouse"+ "_".join(parameters["macrophage_channel"]) + ".csv")
 

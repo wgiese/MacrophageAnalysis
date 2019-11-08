@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -10,16 +12,27 @@ from skimage.io import imread, imshow
 from skimage.morphology import skeletonize
 
 
-data_folder = '/media/wgiese/DATA/Projects/Petya/output/'
+# parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument("-p", "--parameter_file", required=True,
+	help="provide parameter file! start with python generate_csv.py -p [name_of_parameter_file]")
+args = vars(ap.parse_args())
+
+parameter_file = args["parameter_file"]
+
+with open(parameter_file) as f:
+    parameters = json.load(f)
 
 
 
-df_all = pd.read_csv(data_folder + 'df_all.csv') 
+
+
+df_all = pd.read_csv(parameters["output_directory"] + 'df_all.csv') 
 
 print('df_all')
 print(df_all.columns)
 
-df_GFP = pd.read_csv(data_folder + 'df_GFP.csv') 
+df_GFP = pd.read_csv(parameters["output_directory"] + 'df_GFP.csv') 
 
 print('df_GFP')
 print(df_GFP.columns)
@@ -52,8 +65,8 @@ axarr[2].set_title('thick vessels')
 
 #axarr[1].barplot()
 plt.tight_layout()
-plt.savefig(data_folder + 'distances-thin-thick-all.pdf')
-plt.savefig(data_folder + 'distances-thin-thick-all.png')
+plt.savefig(parameters["output_directory"] + 'distances-thin-thick-all.pdf')
+plt.savefig(parameters["output_directory"] + 'distances-thin-thick-all.png')
 
 
 fig,  ax = plt.subplots(figsize=(10,5))
@@ -76,8 +89,8 @@ ax.set_xlabel('tumor developement')
 #plt.xlabel('deviation from flow direction')
 
 plt.tight_layout()
-plt.savefig(data_folder + 'distances.pdf')
-plt.savefig(data_folder + 'distances.png')
+plt.savefig(parameters["output_directory"] + 'distances.pdf')
+plt.savefig(parameters["output_directory"] + 'distances.png')
 
 fig,  axarr = plt.subplots(5,1,figsize=(10,20),sharex=True,sharey = True)
 
@@ -153,8 +166,8 @@ axarr[4].set_ylabel('distance [$\mathrm{\mu}$m]')
 axarr[0].set_xlim(0,150)
 
 plt.tight_layout()
-plt.savefig(data_folder + 'distances_distribution.pdf')
-plt.savefig(data_folder + 'distances_distribution.png')
+plt.savefig(parameters["output_directory"] + 'distances_distribution.pdf')
+plt.savefig(parameters["output_directory"] + 'distances_distribution.png')
 
 
 
@@ -176,8 +189,8 @@ axarr[2].set_title('thick vessels')
 
 #axarr[1].barplot()
 plt.tight_layout()
-plt.savefig(data_folder + 'normalized_distances.pdf')
-plt.savefig(data_folder + 'normalized_distances.png')
+plt.savefig(parameters["output_directory"] + 'normalized_distances.pdf')
+plt.savefig(parameters["output_directory"] + 'normalized_distances.png')
 
 
 fig,  axarr = plt.subplots(3, 1, figsize=(5,10), sharey=True)
@@ -198,8 +211,8 @@ axarr[2].set_title('thick vessels')
 
 #axarr[1].barplot()
 plt.tight_layout()
-plt.savefig(data_folder + 'normalized_distances_excl_vsl.pdf')
-plt.savefig(data_folder + 'normalized_distances_excl_vsl.png')
+plt.savefig(parameters["output_directory"] + 'normalized_distances_excl_vsl.pdf')
+plt.savefig(parameters["output_directory"] + 'normalized_distances_excl_vsl.png')
 
 '''
 plot nearest neighbour metric
@@ -217,8 +230,8 @@ axarr[1].set_ylabel('dist. in $\mu m$')
 axarr[1].set_title('4 nearest neighbours')
 
 plt.tight_layout()
-plt.savefig(data_folder + 'nearest_neighbour_bar.pdf')
-plt.savefig(data_folder + 'nearest_neighbour_bar.png')
+plt.savefig(parameters["output_directory"] + 'nearest_neighbour_bar.pdf')
+plt.savefig(parameters["output_directory"] + 'nearest_neighbour_bar.png')
 
 
 
@@ -276,5 +289,5 @@ axarr[4,1].set_title('occupancy with vessels (r = 50 $\mu m$)')
 axarr[4,1].axhline(1.0, ls='--')
 
 plt.tight_layout()
-plt.savefig(data_folder + 'occupancy.pdf')
-plt.savefig(data_folder + 'occupancy.png')
+plt.savefig(parameters["output_directory"] + 'occupancy.pdf')
+plt.savefig(parameters["output_directory"] + 'occupancy.png')

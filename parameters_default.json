@@ -3,7 +3,16 @@
     "output_directory": "/directory/to/your/output/",
     "meta_data_file" : "meta_file",
     "subfolder_vessel_images" : "subfolder/",
-    "type_column" : "type",
+    "type_column" : "tumor_type",
     "macrophage_channel"  : ["macrophage_channel1","macrophage_channel2"],
-    "occupancy_radius" : 10.0
+    "macrophage_position_files"   : ["macrophage_channel1_files","macrophage_channel2_files"],  
+    "selected_feature" : ["distance_vessels"],
+    "occupancy_radius" : 10.0,
+    "occupancy_sampling" : 10000,
+    "help" : { "type_column" : "column name that specifies some feature of the sample",
+    "macrophage_channel"  : ["name of the column for the first macrophage channel","name of the column for the first macrophage channel1 (in case there is a second channel)"],
+    "macrophage_position_files"   : ["name of the column that contains file names for X-Y postions correscponding to the first macrophage channel","name of the column that contains file names for X-Y postions correscponding to the second macrophage channel"],  
+    "selected_feature" : ["select a feature from distance_vessels, "],
+    "occupancy_radius" : ["radius that is used for the occupancy feature"],
+    "occupancy_sampling" : ["sampling rate for the occupancy feature"]} 
 }
