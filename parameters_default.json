@@ -1,7 +1,9 @@
 {
     "data_directory": "/directory/to/your/data/",
+    "output_directory": "/directory/to/your/output/",
     "meta_data_file" : "meta_file",
     "subfolder_vessel_images" : "subfolder/",
+    "type_column" : "type",
     "macrophage_channel"  : ["macrophage_channel1","macrophage_channel2"],
     "occupancy_radius" : 10.0
 }
