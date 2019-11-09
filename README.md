@@ -6,4 +6,4 @@ Please edit the parameters_default.json. This file needs to be parsed to the cor
 
 ./extract_features.py -p PARAMETER_FILE
 
-Plese read the Wiki for mor info.
+Please read the Wiki for further info.
