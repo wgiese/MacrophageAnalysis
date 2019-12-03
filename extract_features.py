@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 
-import sys
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 import pandas as pd
 from scipy.ndimage.morphology import distance_transform_edt
-from joblib import Parallel, delayed
 from skimage.measure import label, regionprops
 from skimage.io import imread, imshow
 from skimage.morphology import skeletonize

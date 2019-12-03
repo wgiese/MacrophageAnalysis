@@ -4,13 +4,24 @@ import matplotlib.pyplot as plt
 
 import pandas as pd
 from scipy.ndimage.morphology import distance_transform_edt
-from joblib import Parallel, delayed
 from skimage.measure import label, regionprops
 from skimage.io import imread, imshow
 from skimage.morphology import skeletonize
 
 
-data_folder = '/media/wgiese/DATA/Projects/Petya/output/'
+# parse the arguments
+ap = argparse.ArgumentParser()
+ap.add_argument("-p", "--parameter_file", required=True,
+	help="provide parameter file! start with ./generate_csv.py -p [name_of_parameter_file]")
+
+args = vars(ap.parse_args())
+
+parameter_file = args["output_directory"]
+
+with open(parameter_file) as f:
+    parameters = json.load(f)
+
+data_folder = parameters['']
 
 
 
@@ -62,8 +73,6 @@ for mouse in df_raw['mouse_name'].unique():
         
         
         counter += 1
-    #df_raw_per_mouse.at[counter, 'distance_to_vessel(SD)'] = df_raw['distance_vessels'].std()
-    
-        
+           
     
 df_raw_per_mouse.to_csv(data_folder + 'raw_data_per_mouse.csv')

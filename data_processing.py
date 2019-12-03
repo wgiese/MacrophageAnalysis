@@ -5,7 +5,6 @@ import matplotlib
 
 import pandas as pd
 from scipy.ndimage.morphology import distance_transform_edt
-from joblib import Parallel, delayed
 from skimage.measure import label, regionprops
 from skimage.io import imread, imshow
 from skimage.morphology import skeletonize
