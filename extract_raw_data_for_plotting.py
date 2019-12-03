@@ -19,12 +19,12 @@ ap.add_argument("-p", "--parameter_file", required=True,
 
 args = vars(ap.parse_args())
 
-parameter_file = args["output_directory"]
+parameter_file = args["parameter_file"]
 
 with open(parameter_file) as f:
     parameters = json.load(f)
 
-data_folder = parameters['']
+data_folder = parameters["output_directory"]
 
 
 
