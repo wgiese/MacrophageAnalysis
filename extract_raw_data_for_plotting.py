@@ -8,6 +8,9 @@ from skimage.measure import label, regionprops
 from skimage.io import imread, imshow
 from skimage.morphology import skeletonize
 
+import json
+import argparse
+
 
 # parse the arguments
 ap = argparse.ArgumentParser()
