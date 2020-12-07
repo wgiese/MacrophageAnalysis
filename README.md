@@ -6,4 +6,4 @@ Please edit the parameters_default.json. This file needs to be parsed to the cor
 
 ./extract_features.py -p PARAMETER_FILE
 
-Please read the Wiki for further info.
+Please read the Wiki (https://github.com/wgiese/macrophage-analysis/wiki) for further info.
